@@ -1,7 +1,41 @@
+# Archivos de entorno
 .env
 *.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Entornos virtuales de Python
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+
+# Archivos de configuración sensibles
 *.json
 keys/
-__pycache__/
-*.pyc
-venv/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Distribución / empaquetado
+build/
+dist/
+*.egg-info/
