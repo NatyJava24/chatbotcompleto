@@ -119,4 +119,4 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 - GitHub: [@NataliaAraujo24](https://github.com/NataliaAraujo24)
 
 ---
-⭐ ¡Si te gusta este proyecto, dale una estrella en GitHub!
+⭐ ¡Si te gusta este proyecto, dale una estrella en GitHub!# mi-chatbot-gemini1
