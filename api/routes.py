@@ -11,18 +11,21 @@ async def chat_endpoint(request: ChatRequest):
     if not request.mensaje:
         raise HTTPException(status_code=400, detail="El campo 'mensaje' es obligatorio.")
     
-    if request.reset:
-        chat_service.reset_chat()
+    try:
+        # Si reset es True, limpiar la memoria
+        if request.reset:
+            chat_service.reset()
+            
+            # Cambiar el rol si se especifica
+            role_lower = request.role.lower()
+            try:
+                chat_service.set_role(RolePreset(role_lower))
+            except ValueError as e:
+                raise HTTPException(status_code=400, detail=str(e))
         
-        role_lower = request.role.lower()
+        # Procesar el mensaje (fuera del bloque reset)
+        response = chat_service.ask(request.mensaje)
+        return ChatResponse(respuesta=response)
         
-        try:
-            chat_service.set_role(RolePreset(role_lower))
-        except ValueError as e:
-            raise HTTPException(status_code=400, detail=str(e))
-        
-        try:
-            response = chat_service.send_message(request.mensaje)
-            return ChatResponse(respuesta=response)
-        except Exception as e:
-            raise HTTPException(status_code=500, detail="Error al procesar el mensaje.")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error al procesar el mensaje: {str(e)}")
