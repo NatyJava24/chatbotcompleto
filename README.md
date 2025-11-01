@@ -1,24 +1,61 @@
-# 🤖 Chatbot Gemini
+# 🚀 Chatbot Gemini Completo
 
-Un chatbot inteligente desarrollado en Python que utiliza la API de Google Gemini para proporcionar conversaciones contextuales con diferentes roles especializados.
+> **✅ PROYECTO COMPLETAMENTE FUNCIONAL**  
+> Backend FastAPI + Frontend React + Google Gemini AI
 
-## ✨ Características
+Un chatbot inteligente completo con interfaz moderna que utiliza la API de Google Gemini para proporcionar conversaciones contextuales con diferentes roles especializados.
 
-- **Múltiples Roles**: Profesor, Traductor, Programador y Asistente
-- **Memoria Conversacional**: Mantiene el contexto de la conversación
-- **Interfaz Simple**: Fácil de usar desde la línea de comandos
-- **Configuración Flexible**: Parámetros ajustables para reintentos y límites
+![Status](https://img.shields.io/badge/Status-✅%20Funcionando-brightgreen)
+![Backend](https://img.shields.io/badge/Backend-FastAPI-009688)
+![Frontend](https://img.shields.io/badge/Frontend-React-61DAFB)
+![AI](https://img.shields.io/badge/AI-Google%20Gemini-4285F4)
 
-## 🔧 Roles Disponibles
+## 🎯 Instrucciones para el Profesor
 
-1. **Profesor** 📚 - Explica conceptos de manera didáctica
-2. **Traductor** 🌍 - Traduce textos entre idiomas
-3. **Programador** 💻 - Ayuda con código y programación
-4. **Asistente** 🤝 - Asistente general para diversas tareas
+### ⚡ Inicio Rápido (30 segundos)
 
-## 📋 Requisitos
+1. **Clona el repositorio** y navega al directorio:
+   ```bash
+   git clone https://gitlab.com/modelado_de_soft/chatbot-gemini-completo.git
+   cd chatbot-gemini-completo
+   ```
 
-- Python 3.7+
+2. **Configura la API Key** de Google Gemini:
+   ```bash
+   # Copia el archivo de ejemplo
+   cp .env.example .env
+   
+   # Edita el archivo .env y reemplaza 'demo-key-placeholder' con tu API key real
+   # Obtén tu API key en: https://makersuite.google.com/app/apikey
+   ```
+
+3. **Instala y ejecuta el Backend**:
+   ```bash
+   # Crear entorno virtual
+   python -m venv venv
+   
+   # Activar entorno virtual (Windows)
+   venv\Scripts\activate
+   # En Linux/macOS: source venv/bin/activate
+   
+   # Instalar dependencias
+   pip install -r requirements.txt
+   
+   # Ejecutar servidor
+   uvicorn main:app --reload
+   ```
+
+4. **Instala y ejecuta el Frontend** (nueva terminal):
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+5. **¡Listo!** 🎉
+   - Backend: http://127.0.0.1:8000
+   - Frontend: http://localhost:5173
+   - Documentación API: http://127.0.0.1:8000/docs
 - Clave API de Google Gemini
 - Dependencias listadas en `requirements.txt`
 
